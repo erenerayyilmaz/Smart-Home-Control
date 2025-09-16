@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akıllı Ev Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="brand-logo"></div>
+                <div class="brand-title">Akıllı Ev Dashboard</div>
+            </div>
+            <div>
+                <a href="akilli_ev.html" class="btn secondary">Ana Sayfa</a>
+                <button id="themeToggle" class="theme-toggle" aria-label="Tema değiştir">🌞/🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container dashboard">
+        <div class="dashboard-grid">
+            <!-- Energy Usage Chart -->
+            <div class="dashboard-card">
+                <h3>Enerji Kullanımı</h3>
+                <div class="chart-container">
+                    <canvas id="energyChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Real-time Energy Gauge -->
+            <div class="dashboard-card">
+                <h3>Anlık Enerji Kullanımı</h3>
+                <div class="energy-gauge">
+                    <div class="gauge-circle" id="energyGauge">
+                        <span id="energyValue">0%</span>
+                    </div>
+                    <div>
+                        <div class="stat" id="currentUsage">0 kWh</div>
+                        <div style="color: var(--color-muted); font-size: 14px;">Şu anki kullanım</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Device Status Overview -->
+            <div class="dashboard-card">
+                <h3>Cihaz Durumu</h3>
+                <div id="deviceOverview">
+                    <div class="device-status on">🟢 8 Cihaz Açık</div>
+                    <div class="device-status off">⚫ 5 Cihaz Kapalı</div>
+                </div>
+            </div>
+
+            <!-- Temperature Overview -->
+            <div class="dashboard-card">
+                <h3>Sıcaklık Durumu</h3>
+                <div id="temperatureOverview">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-3);">
+                        <span>Ortalama Sıcaklık</span>
+                        <span class="stat" id="avgTemp">22°C</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>En Yüksek</span>
+                        <span class="stat" id="maxTemp">25°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Smart Assistant -->
+        <div class="assistant">
+            <div class="assistant-content">
+                <div style="display: flex; align-items: center; margin-bottom: var(--space-3);">
+                    <span class="assistant-icon">🤖</span>
+                    <h3 style="margin: 0;">Akıllı Asistan</h3>
+                </div>
+                <div id="assistantMessage">
+                    <p style="margin: 0;">Merhaba! Evinizin enerji kullanımı normal seviyede. Önerilerim için sesli komutları kullanabilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Voice Control Button -->
+    <div class="voice-control">
+        <button id="voiceBtn" class="voice-btn" title="Sesli Komut">🎤</button>
+    </div>
+
+    <footer class="footer">
+        <div class="container">© 2025 Akıllı Ev Kontrol Merkezi</div>
+    </footer>
+
+    <script src="akilli_ev.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

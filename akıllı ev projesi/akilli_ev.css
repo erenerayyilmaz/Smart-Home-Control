@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.arka-plan {
+    background-image: url('adawall-seven-cicekli-duvar-kagidi-781--47c8-.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.buton-grubu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ust-butonlar {
+    list-style: none;
+    padding: 0;
+}
+
+.alt-butonlar {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.ust-butonlar li,
+.alt-butonlar li {
+    margin-bottom: 10px;
+}
+
+.ust-butonlar a,
+.alt-butonlar a {
+    display: block;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.ust-butonlar a:hover,
+.alt-butonlar a:hover {
+    background-color: #0056b3;
+}
+
+h1{
+    color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifs;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

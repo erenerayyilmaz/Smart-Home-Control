@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çocuk Odası Kontrolü</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="çocuk_odasi.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="brand-logo"></div>
+                <div class="brand-title">Çocuk Odası</div>
+            </div>
+            <div>
+                <a href="akilli_ev.html" class="btn secondary">Ana Sayfa</a>
+                <button id="themeToggle" class="theme-toggle" aria-label="Tema değiştir">🌞/🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container room-wrap">
+        <div class="room-panel">
+            <div class="room-media">
+                <img src="download.jpg" alt="Çocuk odası görseli">
+                <video id="cameraFeed" autoplay playsinline class="hidden"></video>
+            </div>
+            <div class="room-controls">
+                <div class="control-group">
+                    <h3>Işık</h3>
+                    <div class="control-row">
+                        <button id="lightToggleButton" class="btn off">Işığı Aç</button>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <h3>Sıcaklık</h3>
+                    <div id="temperatureDisplay">Şu anki sıcaklık: <span id="currentTemperature">20</span> °C</div>
+                    <div class="control-row">
+                        <button id="heatDecreaseButton" class="btn secondary">Isıyı Azalt</button>
+                        <button id="heatIncreaseButton" class="btn">Isıyı Artır</button>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <h3>Kamera</h3>
+                    <div class="control-row">
+                        <button id="cameraToggleButton" class="btn secondary">Kamera Aç</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">© 2025 Akıllı Ev Kontrol Merkezi</div>
+    </footer>
+
+    <script src="akilli_ev.js"></script>
+    <script src="çocuk_odasi.js"></script>
+</body>
+</html>
